@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Track Song</title>
     <style>
-        /* Global styles */
+
         body {
             margin: 0;
             font-family: 'Arial', sans-serif;
@@ -14,7 +14,6 @@
             background-color: #000;
         }
 
-        /* Background animation */
         canvas {
             position: fixed;
             top: 0;
@@ -24,7 +23,6 @@
             z-index: -1;
         }
 
-        /* Main container */
         .container {
             text-align: center;
             padding: 50px;
@@ -44,7 +42,6 @@
             100% { opacity: 1; transform: scale(1.1); }
         }
 
-        /* Buttons */
         .button {
             margin: 20px;
             padding: 15px 30px;
@@ -62,7 +59,6 @@
             box-shadow: 0px 0px 20px #00aaff;
         }
 
-        /* Info boxes */
         .info-container {
             display: flex;
             justify-content: center;
@@ -86,7 +82,6 @@
             color: #fff;
         }
 
-        /* Chat page styles */
         .chat-container {
             display: flex;
             flex-direction: column;
@@ -151,7 +146,7 @@
             box-shadow: 0px 0px 20px #00aaff;
         }
 
-        /* Contact page styles */
+
         .contact-container {
             display: flex;
             flex-direction: column;
@@ -205,7 +200,6 @@
             box-shadow: 0px 0px 20px #00aaff;
         }
 
-        /* Large information box */
         .large-info-box {
             margin: 50px auto;
             padding: 30px;
@@ -218,8 +212,6 @@
             font-size: 1.2em;
             line-height: 1.8em;
         }
-
-        /* Footer styles */
         footer {
             text-align: center;
             padding: 20px;
@@ -229,19 +221,17 @@
             position: relative;
 
         }
-          /* Enable scrolling */
           html, body {
             height: 100%;
             overflow-y: auto;
         }
 
         
-                /* Positionnement et style du bouton en haut à droite */
         .top-right {
             position: absolute;
             top: 20px;
             right: 20px;
-            z-index: 10; /* Assure que le bouton est toujours visible */
+            z-index: 10; 
         }
 
         .neon-button {
@@ -278,9 +268,9 @@
         .team-title {
             font-size: 3em;
             margin-bottom: 40px;
-            animation: colorChange 5s infinite; /* Animation de la couleur toutes les 5 secondes */
+            animation: colorChange 5s infinite; 
             background-clip: text;
-            -webkit-background-clip: text; /* Pour Safari */
+            -webkit-background-clip: text; 
             color: transparent;
         }
 
@@ -323,19 +313,19 @@
             color: #ccc;
         }
 
-        /* Animation de changement de couleur */
+      
         @keyframes colorChange {
             0%, 100% {
-                color: #00aaff; /* Bleu */
+                color: #00aaff; 
             }
             25% {
-                color: #8a2be2; /* Violet */
+                color: #8a2be2; 
             }
             50% {
-                color: #ff69b4; /* Rose */
+                color: #ff69b4; 
             }
             75% {
-                color: #add8e6; /* Bleu clair */
+                color: #add8e6; 
             }
         }
 
@@ -362,7 +352,7 @@
             <button class="neon-button" onclick="goToTeam()">Notre Équipe</button>
         </div>        
     </div>    
-     <!-- Large information box -->
+
      <div class="large-info-box">
     L'accès au karaoké amène à un endroit avec un chat intégré à notre site qui communique avec un bot Telegram. Ce bot vous demande de choisir une musique et vous met donc la musique avec les paroles de la chanson que vous avez demandée. Le bot est 100% sécurisé et fonctionnel. Je vous laisse l'essayer 
     </div>
@@ -396,7 +386,7 @@
         <div class="team-container">
             <h1 class="team-title">Notre Équipe</h1>
             <div class="team-grid">
-                <!-- Les boxes pour chaque membre -->
+      
                 <div class="team-box">
                     <img src="https://media.discordapp.net/attachments/1051787998783602739/1109909057311084725/Illustration_sans_titre.jpg?ex=67650d1c&is=6763bb9c&hm=0822144fa984e21f1ca9859bc8833b7da45953d9509f79f4274db90e88f1cf99&=&format=webp&width=468&height=468" alt="Photo de Profil" class="profile-pic">
                     <h2>Gourdel Killian</h2>
@@ -407,7 +397,7 @@
                     <h2>Henaff Mael</h2>
                     <p>Rôle : Développeur</p>
                 </div>
-                <!-- Répétez pour 13 membres au total -->
+              
                 <div class="team-box">
                     <img src="https://th.bing.com/th/id/R.aece1145f2d3480e38bc9443a4998c04?rik=ey6pjfxR5wHPvQ&riu=http%3a%2f%2finstitutcommotions.com%2fwp-content%2fuploads%2f2018%2f05%2fblank-profile-picture-973460_960_720-1.png&ehk=cWQNlcoT06KT7deWxMnwK034GVCHVSXupbX4E5i1Psw%3d&risl=&pid=ImgRaw&r=0" alt="Photo de Profil" class="profile-pic">
                     <h2>Nom du Membre 3</h2>
@@ -463,7 +453,7 @@
                     <h2>Nom du Membre 13</h2>
                     <p>Rôle</p>
                 </div>
-                <!-- Continuez ainsi jusqu'à 13 membres -->
+         
             </div>
             <button class="back-button" onclick="goToHome()">Retour À L'accueil</button>
         </div>
@@ -471,7 +461,7 @@
     
     
     <script>
-        // Background animation
+
         const canvas = document.getElementById('background');
         const ctx = canvas.getContext('2d');
         let particles = [];
@@ -535,7 +525,7 @@
             document.querySelector('.container').style.display = 'none';
             document.getElementById('chatPage').style.display = 'block';
             document.getElementById('contactPage').style.display = 'none';
-            document.querySelector('.large-info-box').style.display = 'none'; // Cache la boîte
+            document.querySelector('.large-info-box').style.display = 'none'; 
         }
 
         function goToContact() {
@@ -545,7 +535,7 @@
             document.querySelector('.container').style.display = 'none';
             document.getElementById('chatPage').style.display = 'none';
             document.getElementById('contactPage').style.display = 'block';
-            document.querySelector('.large-info-box').style.display = 'none'; // Cache la boîte
+            document.querySelector('.large-info-box').style.display = 'none'; 
         }
 
         function goToHome() {
@@ -555,7 +545,7 @@
             document.querySelector('.container').style.display = 'block';
             document.getElementById('chatPage').style.display = 'none';
             document.getElementById('contactPage').style.display = 'none';
-            document.querySelector('.large-info-box').style.display = 'block'; // Affiche la boîte
+            document.querySelector('.large-info-box').style.display = 'block'; 
         }
 
         function goToTeam() {
@@ -563,10 +553,10 @@
             document.getElementById('chatPage').style.display = 'none';
             document.getElementById('contactPage').style.display = 'none';
             document.getElementById('teamPage').style.display = 'block';
-            document.querySelector('.large-info-box').style.display = 'none'; // Cache la boîte
+            document.querySelector('.large-info-box').style.display = 'none'; 
         }
 
-        // Chat functionality
+
         const messagesDiv = document.getElementById('messages');
 
         function sendMessage() {
@@ -582,7 +572,7 @@
 
             input.value = '';
 
-            // Simulate Telegram bot response
+ 
             setTimeout(() => {
                 const botMessage = document.createElement('div');
                 botMessage.textContent = 'Bot: Ceci est la réponse du bot Télégram!';
